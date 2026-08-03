@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Kennedy Lifting — avaliação física, montagem de treino e consultoria personalizada."
+    >
+
+    <title>Kennedy Lifting | Preparação Física</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: #ffffff;
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 28px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: 900;
+
+            letter-spacing: -0.8px;
+
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            font-weight: 400;
+        }
+
+        .header-contact {
+            border: 1px solid rgba(255, 255, 255, 0.35);
+
+            padding: 10px 16px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.25s;
+        }
+
+        .header-contact:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            min-height: 100svh;
+
+            background: #050505;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 6% 80px;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: minmax(0, 1fr) minmax(380px, 500px);
+
+            align-items: center;
+
+            gap: 80px;
+        }
+
+
+        /* =====================================================
+           HERO — TEXTO
+        ===================================================== */
+
+        .hero-text {
+            width: 100%;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 25px;
+
+            color: #a0a0a0;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 28px;
+            height: 1px;
+
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           TÍTULO
+        ===================================================== */
+
+        .hero-title {
+            font-size: clamp(55px, 8vw, 105px);
+
+            line-height: 0.86;
+
+            letter-spacing: -5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-title .kennedy {
+            display: block;
+
+            color: #ffffff;
+
+            font-weight: 900;
+        }
+
+        .hero-title .lifting {
+            display: block;
+
+            color: #bdbdbd;
+
+            font-weight: 300;
+        }
+
+
+        /* =====================================================
+           DESCRIÇÃO
+        ===================================================== */
+
+        .hero-description {
+            max-width: 510px;
+
+            margin-bottom: 32px;
+
+            color: #a2a2a2;
+
+            font-size: 15px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           BOTÃO
+        ===================================================== */
+
+        .main-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            min-height: 52px;
+
+            padding: 0 24px;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.7px;
+
+            text-transform: uppercase;
+
+            border-radius: 2px;
+
+            transition:
+                background 0.25s,
+                color 0.25s,
+                transform 0.25s;
+        }
+
+        .main-button span {
+            font-size: 18px;
+
+            line-height: 1;
+        }
+
+        .main-button:hover {
+            background: #cfcfcf;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           HERO — IMAGEM
+        ===================================================== */
+
+        .hero-image-container {
+            width: 100%;
+
+            aspect-ratio: 0.82;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background: #111111;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            filter: grayscale(100%);
+
+            transition: transform 0.7s ease;
+        }
+
+        .hero-image-container:hover .hero-image {
+            transform: scale(1.025);
+        }
+
+
+        /* =====================================================
+           FAIXA DA MARCA
+        ===================================================== */
+
+        .brand-bar {
+            width: 100%;
+
+            padding: 22px 6%;
+
+            background: #090909;
+
+            border-top: 1px solid #1d1d1d;
+            border-bottom: 1px solid #1d1d1d;
+
+            text-align: center;
+        }
+
+        .brand-bar p {
+            color: #666666;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .brand-bar strong {
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           SEÇÕES
+        ===================================================== */
+
+        .section {
+            padding: 110px 6%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+        }
+
+        .section-label {
+            margin-bottom: 15px;
+
+            color: #777777;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            max-width: 800px;
+
+            margin-bottom: 20px;
+
+            color: #ffffff;
+
+            font-size: clamp(38px, 6vw, 68px);
+
+            line-height: 0.92;
+
+            letter-spacing: -3px;
+
+            text-transform: uppercase;
+        }
+
+        .section-description {
+            max-width: 580px;
+
+            margin-bottom: 50px;
+
+            color: #858585;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           SERVIÇOS
+        ===================================================== */
+
+        .services {
+            background: #050505;
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            border: 1px solid #202020;
+        }
+
+        .service {
+            min-height: 300px;
+
+            padding: 32px;
+
+            background: #080808;
+
+            border-right: 1px solid #202020;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition: 0.25s;
+        }
+
+        .service:last-child {
+            border-right: none;
+        }
+
+        .service:hover {
+            background: #111111;
+        }
+
+        .service-number {
+            color: #5d5d5d;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .service h3 {
+            margin-bottom: 12px;
+
+            color: #ffffff;
+
+            font-size: 22px;
+
+            line-height: 1;
+
+            letter-spacing: -0.7px;
+
+            text-transform: uppercase;
+        }
+
+        .service p {
+            color: #7f7f7f;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .service-arrow {
+            align-self: flex-end;
+
+            color: #ffffff;
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           SOBRE
+        ===================================================== */
+
+        .about {
+            background: #0a0a0a;
+        }
+
+        .about-container {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+        .about-title {
+            color: #ffffff;
+
+            font-size: clamp(40px, 6vw, 70px);
+
+            line-height: 0.9;
+
+            letter-spacing: -4px;
+
+            text-transform: uppercase;
+        }
+
+        .about-title span {
+            display: block;
+
+            color: #666666;
+
+            font-weight: 300;
+        }
+
+        .about-text {
+            color: #888888;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            padding: 130px 6%;
+
+            background: #050505;
+
+            text-align: center;
+        }
+
+        .cta .section-label {
+            margin-bottom: 18px;
+        }
+
+        .cta-title {
+            max-width: 850px;
+
+            margin: 0 auto 25px;
+
+            color: #ffffff;
+
+            font-size: clamp(45px, 8vw, 85px);
+
+            line-height: 0.88;
+
+            letter-spacing: -4px;
+
+            text-transform: uppercase;
+        }
+
+        .cta-description {
+            max-width: 500px;
+
+            margin: 0 auto 35px;
+
+            color: #777777;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 30px 6%;
+
+            background: #050505;
+
+            border-top: 1px solid #1b1b1b;
+
+            color: #555555;
+
+            text-align: center;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           WHATSAPP FLUTUANTE
+        ===================================================== */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 55px;
+            height: 55px;
+
+            z-index: 500;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            border-radius: 50%;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+
+            transition: 0.25s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+                grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+
+                gap: 45px;
+            }
+
+            .hero-title {
+                font-size: clamp(52px, 8vw, 78px);
+
+                letter-spacing: -4px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service {
+                min-height: 230px;
+
+                border-right: none;
+
+                border-bottom: 1px solid #202020;
+            }
+
+            .service:last-child {
+                border-bottom: none;
+            }
+
+            .about-container {
+                gap: 50px;
+            }
+        }
+
+
+        /* =====================================================
+           CELULAR
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            /* HEADER */
+
+            header {
+                padding: 20px 5%;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .header-contact {
+                padding: 9px 12px;
+
+                font-size: 8px;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: auto;
+
+                padding: 120px 5% 60px;
+            }
+
+            .hero-container {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 40px;
+            }
+
+
+            /* TEXTO */
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .eyebrow {
+                margin-bottom: 20px;
+
+                font-size: 9px;
+
+                letter-spacing: 2px;
+            }
+
+            .eyebrow::before {
+                width: 22px;
+            }
+
+            .hero-title {
+                margin-bottom: 25px;
+
+                font-size: clamp(52px, 16vw, 75px);
+
+                line-height: 0.88;
+
+                letter-spacing: -3.5px;
+            }
+
+            .hero-description {
+                max-width: 100%;
+
+                margin-bottom: 25px;
+
+                font-size: 13px;
+
+                line-height: 1.7;
+            }
+
+            .main-button {
+                width: 100%;
+            }
+
+
+            /* IMAGEM */
+
+            .hero-image-container {
+                width: 100%;
+
+                height: 390px;
+
+                aspect-ratio: auto;
+
+                order: 2;
+            }
+
+            .hero-image {
+                object-position: center;
+            }
+
+
+            /* MARCA */
+
+            .brand-bar {
+                padding: 18px 5%;
+            }
+
+            .brand-bar p {
+                font-size: 8px;
+
+                line-height: 1.7;
+
+                letter-spacing: 2px;
+            }
+
+
+            /* SEÇÕES */
+
+            .section {
+                padding: 80px 5%;
+            }
+
+            .section-title {
+                font-size: 42px;
+
+                letter-spacing: -2.5px;
+            }
+
+            .section-description {
+                margin-bottom: 35px;
+            }
+
+
+            /* SERVIÇOS */
+
+            .service {
+                min-height: 220px;
+
+                padding: 25px;
+            }
+
+            .service h3 {
+                font-size: 20px;
+            }
+
+
+            /* SOBRE */
+
+            .about-container {
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 40px;
+
+                align-items: flex-start;
+            }
+
+            .about-title {
+                font-size: 45px;
+
+                letter-spacing: -2.5px;
+            }
+
+
+            /* CTA */
+
+            .cta {
+                padding: 90px 5%;
+            }
+
+            .cta-title {
+                font-size: 48px;
+
+                letter-spacing: -2.5px;
+            }
+
+
+            /* WHATSAPP */
+
+            .whatsapp {
+                right: 15px;
+                bottom: 15px;
+
+                width: 52px;
+                height: 52px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <div class="logo">
+            KENNEDY <span>LIFTING</span>
+        </div>
+
+        <a
+            class="header-contact"
+            href="https://wa.me/5538997541893?text=Olá%20Kennedy!%20Gostaria%20de%20conhecer%20seu%20trabalho."
+            target="_blank"
+        >
+            Contato
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+
+            <!-- TEXTO À ESQUERDA -->
+
+            <div class="hero-text">
+
+                <div class="eyebrow">
+                    Preparação física personalizada
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    <span class="kennedy">
+                        Treino
+                    </span>
+
+                    <span class="lifting">
+                        Pesado
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Treinamento pensado para quem não quer apenas
+                    treinar, mas desenvolver força, desempenho e
+                    evolução de verdade.
+
+                </p>
+
+
+                <a
+                    class="main-button"
+                    href="https://wa.me/5538997541893?text=Olá%20Kennedy!%20Quero%20saber%20mais%20sobre%20a%20consultoria."
+                    target="_blank"
+                >
+
+                    Falar com Kennedy
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- IMAGEM À DIREITA -->
+
+            <div class="hero-image-container">
+
+                <img
+                    class="hero-image"
+                    src="https://athenyx.com.br/cdn/shop/files/IMG_3721.jpg?v=1763177982&width=600"
+                    alt="Kennedy Lifting"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BARRA DA MARCA
+    ===================================================== -->
+
+    <div class="brand-bar">
+
+        <p>
+
+            <strong>KENNEDY LIFTING</strong>
+
+            &nbsp; — &nbsp;
+
+            FORÇA • PERFORMANCE • EVOLUÇÃO
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SERVIÇOS
+    ===================================================== -->
+
+    <section class="section services">
+
+        <div class="container">
+
+            <div class="section-label">
+                Serviços
+            </div>
+
+
+            <h2 class="section-title">
+                Seu treino.<br>
+                Sua evolução.
+            </h2>
+
+
+            <p class="section-description">
+
+                Estratégias personalizadas para diferentes
+                objetivos e níveis de treinamento.
+
+            </p>
+
+
+            <div class="services-grid">
+
+
+                <!-- 01 -->
+
+                <article class="service">
+
+                    <div class="service-number">
+                        01 / AVALIAÇÃO
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Avaliação Física
+                        </h3>
+
+                        <p>
+
+                            Entenda seu estado físico atual
+                            e identifique os pontos que precisam
+                            ser trabalhados.
+
+                        </p>
+
+                    </div>
+
+                    <div class="service-arrow">
+                        →
+                    </div>
+
+                </article>
+
+
+                <!-- 02 -->
+
+                <article class="service">
+
+                    <div class="service-number">
+                        02 / TREINAMENTO
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Montagem de Treino
+                        </h3>
+
+                        <p>
+
+                            Um planejamento estruturado
+                            de acordo com seu objetivo,
+                            nível e rotina.
+
+                        </p>
+
+                    </div>
+
+                    <div class="service-arrow">
+                        →
+                    </div>
+
+                </article>
+
+
+                <!-- 03 -->
+
+                <article class="service">
+
+                    <div class="service-number">
+                        03 / ACOMPANHAMENTO
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Consultoria
+                        </h3>
+
+                        <p>
+
+                            Acompanhamento e direcionamento
+                            para você continuar evoluindo
+                            com consistência.
+
+                        </p>
+
+                    </div>
+
+                    <div class="service-arrow">
+                        →
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOBRE
+    ===================================================== -->
+
+    <section class="section about">
+
+        <div class="container about-container">
+
+
+            <div>
+
+                <div class="section-label">
+                    Kennedy Lifting
+                </div>
+
+                <h2 class="about-title">
+
+                    Não é apenas
+                    <span>treinar.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    O objetivo é transformar treinamento
+                    em evolução.
+                </p>
+
+                <p>
+                    Cada pessoa possui um ponto de partida,
+                    uma rotina e um objetivo diferente.
+                    Por isso, o planejamento precisa ser
+                    construído individualmente.
+                </p>
+
+                <p>
+                    A Kennedy Lifting trabalha com
+                    planejamento, estratégia e consistência
+                    para levar seu treinamento ao próximo nível.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="section-label">
+                Comece agora
+            </div>
+
+
+            <h2 class="cta-title">
+                Pronto para evoluir?
+            </h2>
+
+
+            <p class="cta-description">
+
+                Entre em contato com Kennedy pelo WhatsApp
+                e descubra qual serviço faz mais sentido
+                para seu objetivo.
+
+            </p>
+
+
+            <a
+                class="main-button"
+                href="https://wa.me/5538997541893?text=Olá%20Kennedy!%20Quero%20começar%20meu%20planejamento."
+                target="_blank"
+            >
+
+                Quero começar
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        KENNEDY LIFTING © 2026
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         WHATSAPP FLUTUANTE
+    ===================================================== -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/5538997541893?text=Olá%20Kennedy!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consultoria."
+        target="_blank"
+        aria-label="Falar com Kennedy pelo WhatsApp"
+    >
+        WA
+    </a>
+
+
+</body>
+
+</html>
